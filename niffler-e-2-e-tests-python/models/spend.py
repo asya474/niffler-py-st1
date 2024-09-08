@@ -1,10 +1,27 @@
+from datetime import datetime
 
 from pydantic import BaseModel
+from sqlmodel import SQLModel, Field
 
 
-class Envs(BaseModel):
-    frontend_url: str
-    gateway_url: str
-    spend_db_url: str
-    test_username: str
-    test_password: str
+class Category(SQLModel, table=True):
+    id: str = Field(default=None, primary_key=True)
+    category: str
+    username: str
+
+
+class Spend(SQLModel, table=True):
+    id: str = Field(default=None, primary_key=True)
+    amount: float
+    description: str
+    category: str
+    spendDate: datetime
+    currency: str
+
+
+class SpendAdd(BaseModel):
+    amount: float
+    description: str
+    category: str
+    spendDate: str
+    currency: str

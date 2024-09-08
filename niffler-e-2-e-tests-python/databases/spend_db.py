@@ -4,7 +4,7 @@ from typing import Sequence
 from sqlalchemy import create_engine, Engine
 from sqlmodel import Session, select
 
-from models.spend import Category
+from ..models.spend import Category
 
 
 class SpendDb:
