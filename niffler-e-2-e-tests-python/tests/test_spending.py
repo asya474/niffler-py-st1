@@ -1,6 +1,6 @@
 
 from selene import browser, have
-from marks import Pages, TestData
+from ..marks import Pages, TestData
 
 
 @Pages.main_page
