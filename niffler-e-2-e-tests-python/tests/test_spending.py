@@ -1,8 +1,8 @@
 
 import pytest
 from selene import browser, have, command
-from marks import Pages, TestData
-from models.spend import SpendAdd
+from ..marks import Pages, TestData
+from ..models.spend import SpendAdd
 
 pytestmark = [pytest.mark.allure_label("Spendings", label_type="epic")]
 

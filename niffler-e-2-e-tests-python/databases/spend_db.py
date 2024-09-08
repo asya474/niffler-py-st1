@@ -6,7 +6,7 @@ from allure_commons.types import AttachmentType
 from sqlalchemy import create_engine, Engine, event
 from sqlmodel import Session, select
 
-from models.spend import Category
+from ..models.spend import Category
 
 
 class SpendDb:
