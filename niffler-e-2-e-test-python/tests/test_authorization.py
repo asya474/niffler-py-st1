@@ -3,6 +3,7 @@ from selene.support.shared import browser
 
 
 
+
 def test_success_login(user_credentials):
     username = user_credentials['username']
     password = user_credentials['password']
