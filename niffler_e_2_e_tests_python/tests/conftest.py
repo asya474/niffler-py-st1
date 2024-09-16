@@ -4,9 +4,9 @@ import os
 import pytest
 from dotenv import load_dotenv
 from selene import browser
-from clients.spends_client import SpendsHttpClient
-from databases.spend_db import SpendDb
-from models.config import Envs
+from niffler_e_2_e_tests_python.clients.spends_client import SpendsHttpClient
+from niffler_e_2_e_tests_python.databases.spend_db import SpendDb
+from niffler_e_2_e_tests_python.models.config import Envs
 
 
 @pytest.fixture(scope="session")

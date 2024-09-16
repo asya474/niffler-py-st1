@@ -1,8 +1,8 @@
 
 import pytest
 from selene import browser, have, command
-from ..marks import Pages, TestData
-from ..models.spend import SpendAdd
+from niffler_e_2_e_tests_python.marks import Pages, TestData
+from niffler_e_2_e_tests_python.models.spend import SpendAdd
 
 
 @Pages.main_page

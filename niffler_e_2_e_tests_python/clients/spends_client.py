@@ -3,7 +3,7 @@ from urllib.parse import urljoin
 
 import requests
 
-from ..models.spend import Category, Spend, SpendAdd
+from niffler_e_2_e_tests_python.models.spend import Category, Spend, SpendAdd
 
 
 class SpendsHttpClient:
