@@ -7,7 +7,7 @@ from allure_commons.types import AttachmentType
 from requests import Response
 from requests_toolbelt.utils.dump import dump_response
 
-from ..models.spend import Category, Spend, SpendAdd
+from niffler_e_2_e_tests_python.models.spend import Category, Spend, SpendAdd
 
 
 class SpendsHttpClient:

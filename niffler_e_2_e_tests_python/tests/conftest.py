@@ -9,9 +9,9 @@ from allure_pytest.listener import AllureListener
 from pytest import Item, FixtureDef, FixtureRequest
 from dotenv import load_dotenv
 from selene import browser
-from clients.spends_client import SpendsHttpClient
-from databases.spend_db import SpendDb
-from models.config import Envs
+from niffler_e_2_e_tests_python.clients.spends_client import SpendsHttpClient
+from niffler_e_2_e_tests_python.databases.spend_db import SpendDb
+from niffler_e_2_e_tests_python.models.config import Envs
 
 
 def allure_logger(config) -> AllureReporter:
