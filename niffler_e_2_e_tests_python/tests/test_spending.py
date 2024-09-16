@@ -1,6 +1,5 @@
-
+from niffler_e_2_e_tests_python.marks import Pages, TestData
 from selene import browser, have
-from ..marks import Pages, TestData
 
 
 @Pages.main_page

@@ -4,7 +4,7 @@ import os
 import pytest
 from dotenv import load_dotenv
 from selene import browser
-from clients.spends_client import SpendsHttpClient
+from niffler_e_2_e_tests_python.clients.spends_client import SpendsHttpClient
 
 
 @pytest.fixture(scope="session")
