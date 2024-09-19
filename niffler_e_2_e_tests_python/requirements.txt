@@ -1,0 +1,9 @@
+pydantic
+selene>=2.0.0rc7
+pytest
+requests
+python-dotenv
+
+psycopg2-binary
+sqlalchemy
+sqlmodel
