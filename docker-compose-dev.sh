@@ -1,7 +1,6 @@
 #!/bin/bash
 source ./docker.properties
 export PROFILE="${PROFILE:=docker}"
-
 echo '### Java version ###'
 java --version
 

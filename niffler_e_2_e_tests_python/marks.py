@@ -2,7 +2,7 @@ import pytest
 
 
 class Pages:
-    main_page = pytest.mark.usefixtures("main_page")
+    spending_page = pytest.mark.usefixtures("spending_page")
 
 
 class TestData:
