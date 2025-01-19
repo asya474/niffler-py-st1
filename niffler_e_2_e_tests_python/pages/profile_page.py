@@ -14,8 +14,11 @@ class ProfilePage(BasePage):
 
 
     def assert_added_category(self, category):
-        last_category_item = self.find_element('.categories__list .categories__item:last-child')
-        last_category_item.should(have.text(category))
+        #self.assert_text('.categories__list .categories__item', category)
+        categories_list = self.find_element('.categories__list')
+        categories_items = categories_list.all('.categories__item')
+        categories_items.should(have._texts_like(category))
+
 
     def update_profile(self, name, surname):
         self.find_element('input[name=firstname]').set_value(name)

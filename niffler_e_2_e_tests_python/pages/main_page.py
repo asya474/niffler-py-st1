@@ -48,23 +48,8 @@ class MainPage(BasePage):
 
     def spending_added(self, AMOUNT, CATEGORY, DESCRIPTION):
         spending_table = self.find_element('.spendings-table tbody tr')
-        rows = spending_table.all('tr')
-
-        for row in rows:
-            values = row.all('td .value-container')
-
-            # Убедитесь, что у вас есть достаточно элементов
-            if len(values) >= 3:
-                # Получаем текст элементов
-                texts = [value.text for value in values]
-
-                # Проверяем, что значения соответствуют ожиданиям
-                if (texts[0] == AMOUNT and
-                        texts[1] == CATEGORY and
-                        texts[2] == DESCRIPTION):
-                    return True
-
-        return False
+        elements = spending_table.all('td .value-container')
+        elements.should(have._texts_like(AMOUNT, CATEGORY, DESCRIPTION))
 
 
     def delete_spending(self):
