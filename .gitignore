@@ -1,0 +1,14 @@
+/niffler-userdata/
+/niffler-spend/
+/niffler-grpc-common/
+/niffler-gateway/
+/niffler-frontend-gql/
+/niffler-frontend/
+/niffler-e-2-e-tests/
+/niffler-currency/
+/niffler-auth/
+/gradle/
+/postgres/
+/selenoid/
+/wiremock/
+.idea/
