@@ -1,4 +1,3 @@
-
 from sqlalchemy import create_engine, Engine
 from sqlmodel import Session, select, delete
 

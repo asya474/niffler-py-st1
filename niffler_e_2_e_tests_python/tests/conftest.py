@@ -161,10 +161,3 @@ def remove_all_categories(request, spends_client, spend_db):
 @pytest.fixture()
 def spending_page(login_app_user, envs):
     browser.open(envs.frontend_url)
-
-@pytest.fixture(scope="session", autouse=True)
-def delete_all_users_except_test_after_all(user_db, envs):
-    users = user_db.get_all_users()
-    for user in users:
-        if user.username != envs.test_username:
-            user_db.delete_user(user.username)
