@@ -5,7 +5,7 @@ from pages.login_page import login_page
 
 
 @Pages.spending_page
-def test_empty_people_table(logout):
+def test_empty_people_table(delete_all_users_except_test_after_all, logout):
         main_page.go_to_people()
         people_page.assert_empty_people_table('There are no other users yet!')
 
