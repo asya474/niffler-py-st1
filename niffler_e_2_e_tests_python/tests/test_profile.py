@@ -2,7 +2,7 @@ from pages.main_page import main_page
 from pages.profile_page import profile_page
 from marks import Pages
 
-TEST_CATEGORY='EDUCATION'
+TEST_CATEGORY='asxchj'
 
 @Pages.spending_page
 def test_add_new_category(remove_all_categories, logout):

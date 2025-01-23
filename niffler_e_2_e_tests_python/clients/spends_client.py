@@ -1,5 +1,4 @@
 from urllib.parse import urljoin
-
 import requests
 
 from models.spend import Category, Spend, SpendAdd

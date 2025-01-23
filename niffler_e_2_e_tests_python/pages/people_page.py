@@ -11,8 +11,8 @@ class PeoplePage(BasePage):
 
     def assert_people_in_table(self, username):
         people_table = self.find_element('.people-content tbody tr')
-        elements = people_table.all('td')
-        elements.should(have._texts_like(username))
+        last_element = people_table.all('td :last-child')
+        last_element.should(have.texts(username))
 
 
     def add_friend(self):
