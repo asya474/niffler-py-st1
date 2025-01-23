@@ -8,5 +8,7 @@ class Envs(BaseModel):
     spend_db_url: str
     user_db_url: str
     userdata_db_url: str
+    postgres_user: str
+    postgres_password: str
     test_username: str
     test_password: str

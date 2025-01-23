@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, Engine
+from sqlalchemy import create_engine, Engine, Sequence
 from sqlmodel import Session, select
 
 from models.user import User, Authority
@@ -12,6 +12,10 @@ class UserDb:
 
         self.engine = create_engine(db_url)
 
+    def get_all_users(self) -> Sequence[User]:
+        with Session(self.engine) as session:
+            statement = select(User)
+            return session.exec(statement).all()
 
     def delete_user_authority(self, username: str):
         with Session(self.engine) as session:

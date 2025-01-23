@@ -22,11 +22,14 @@ fake = Faker()
 def envs() -> Envs:
     load_dotenv()
     return Envs(
+        auth_url=os.getenv("AUTH_URL"),
         frontend_url=os.getenv("FRONTEND_URL"),
         gateway_url=os.getenv("GATEWAY_URL"),
         spend_db_url=os.getenv("SPEND_DB_URL"),
         user_db_url=os.getenv("USER_DB_URL"),
         userdata_db_url=os.getenv("USERDATA_DB_URL"),
+        postgres_user=os.getenv("POSTGRES_USER"),
+        postgres_password=os.getenv("POSTGRES_PASSWORD"),
         test_username=os.getenv("TEST_USERNAME"),
         test_password=os.getenv("TEST_PASSWORD")
     )
@@ -161,3 +164,10 @@ def remove_all_categories(request, spends_client, spend_db):
 @pytest.fixture()
 def spending_page(login_app_user, envs):
     browser.open(envs.frontend_url)
+
+@pytest.fixture(scope="session", autouse=True)
+def delete_all_users_except_test_after_all(user_db, envs):
+    users = user_db.get_all_users()
+    for user in users:
+        if user.username != envs.test_username:
+            user_db.delete_user(user.username)
