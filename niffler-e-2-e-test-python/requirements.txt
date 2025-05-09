@@ -1,0 +1,9 @@
+pytest
+requests
+python-dotenv
+selene>=2.0.0rc7
+selenium==4.17.2
+jsonschema
+pydantic
+playwright
+faker
